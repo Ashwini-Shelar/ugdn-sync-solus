@@ -1,0 +1,249 @@
+2019-02-25 15:07:42.006  INFO 3736 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 3736 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 15:07:42.010  INFO 3736 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 15:07:43.530  INFO 3736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 15:07:43.580  INFO 3736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 15:07:43.580  INFO 3736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 15:07:43.592  INFO 3736 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 15:07:43.748  INFO 3736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 15:07:43.748  INFO 3736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1685 ms
+2019-02-25 15:07:44.131  INFO 3736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-25 15:07:44.503  INFO 3736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-25 15:07:44.508  INFO 3736 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 3.232 seconds (JVM running for 4.586)
+2019-02-25 15:08:09.672  INFO 3736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-25 15:08:09.672  INFO 3736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-25 15:08:09.680  INFO 3736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-02-25 15:08:09.705  INFO 3736 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Fetching all employees
+2019-02-25 15:08:09.748  INFO 3736 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-25 15:08:10.974  INFO 3736 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-25 15:21:59.185  INFO 3736 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-25 15:21:59.188  INFO 3736 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-25 15:21:59.189  INFO 3736 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-25 15:21:59.489  INFO 3736 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-25 15:25:31.740  INFO 10248 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 10248 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 15:25:31.743  INFO 10248 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 15:25:33.062  INFO 10248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 15:25:33.091  INFO 10248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 15:25:33.104  INFO 10248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 15:25:33.111  INFO 10248 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 15:25:33.231  INFO 10248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 15:25:33.232  INFO 10248 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1445 ms
+2019-02-25 15:25:33.594  INFO 10248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-25 15:25:33.850  INFO 10248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-25 15:25:33.854  INFO 10248 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 2.496 seconds (JVM running for 3.497)
+2019-02-25 15:25:52.717  INFO 10248 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-25 15:25:52.718  INFO 10248 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-25 15:25:52.726  INFO 10248 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-02-25 15:25:52.765  INFO 10248 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : Fetching all employees
+2019-02-25 15:25:52.780  INFO 10248 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-25 15:25:53.680  INFO 10248 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-25 15:31:18.030  INFO 10248 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-02-25 15:31:18.033  INFO 10248 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-25 15:31:18.033  INFO 10248 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-25 15:31:18.341  INFO 10248 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-25 16:23:11.239  INFO 12132 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 12132 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 16:23:11.242  INFO 12132 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 16:23:12.551  INFO 12132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 16:23:12.593  INFO 12132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 16:23:12.593  INFO 12132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 16:23:12.601  INFO 12132 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 16:23:12.706  INFO 12132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 16:23:12.706  INFO 12132 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1412 ms
+2019-02-25 16:23:12.767  WARN 12132 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-25 16:23:12.770  INFO 12132 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-02-25 16:23:12.788  INFO 12132 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-25 16:23:12.932 ERROR 12132 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field empService in com.upl.ugdnsyncsolus.controller.UgdnSyncSolusRestController required a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' in your configuration.
+
+2019-02-25 16:24:19.598  INFO 5216 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 5216 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 16:24:19.601  INFO 5216 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 16:24:20.735  INFO 5216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 16:24:20.775  INFO 5216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 16:24:20.775  INFO 5216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 16:24:20.782  INFO 5216 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 16:24:20.888  INFO 5216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 16:24:20.888  INFO 5216 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1235 ms
+2019-02-25 16:24:20.948  WARN 5216 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-25 16:24:20.951  INFO 5216 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-02-25 16:24:20.964  INFO 5216 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-25 16:24:21.068 ERROR 5216 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field empService in com.upl.ugdnsyncsolus.controller.UgdnSyncSolusRestController required a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' in your configuration.
+
+2019-02-25 16:25:47.751  INFO 1880 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 1880 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 16:25:47.756  INFO 1880 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 16:25:48.876  INFO 1880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 16:25:48.916  INFO 1880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 16:25:48.916  INFO 1880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 16:25:48.923  INFO 1880 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 16:25:49.030  INFO 1880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 16:25:49.030  INFO 1880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1224 ms
+2019-02-25 16:25:49.089  WARN 1880 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-25 16:25:49.092  INFO 1880 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-02-25 16:25:49.105  INFO 1880 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-25 16:25:49.215 ERROR 1880 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field empService in com.upl.ugdnsyncsolus.controller.UgdnSyncSolusRestController required a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' in your configuration.
+
+2019-02-25 16:26:57.084  INFO 6760 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on DESKTOP-L6QCO9G with PID 6760 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 16:26:57.087  INFO 6760 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-02-25 16:26:58.236  INFO 6760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-02-25 16:26:58.261  INFO 6760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-25 16:26:58.262  INFO 6760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-25 16:26:58.269  INFO 6760 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Ashwini_2\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashwini_2\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashwini_2\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;D:\SOFTWARES\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Users\Ashwini_2\AppData\Roaming\npm;C:\Program Files\nodejs;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\SOFTWARES\sts\sts-bundle\sts-3.9.0.RELEASE;;.]
+2019-02-25 16:26:58.376  INFO 6760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-25 16:26:58.376  INFO 6760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1238 ms
+2019-02-25 16:26:58.437  WARN 6760 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-25 16:26:58.440  INFO 6760 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-02-25 16:26:58.454  INFO 6760 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-25 16:26:58.558 ERROR 6760 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field empService in com.upl.ugdnsyncsolus.controller.UgdnSyncSolusRestController required a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' in your configuration.
+
+2019-02-25 16:27:27.373  INFO 7532 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Starting UgdnsyncsolusApplicationTests on DESKTOP-L6QCO9G with PID 7532 (started by Ashwini_2 in D:\GIT PROJECTS\ugdn-solus-sync\ugdnsyncsolus)
+2019-02-25 16:27:27.377  INFO 7532 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : No active profile set, falling back to default profiles: default
+2019-02-25 16:27:29.484  WARN 7532 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-02-25 16:27:29.496  INFO 7532 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-25 16:27:29.638 ERROR 7532 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field empService in com.upl.ugdnsyncsolus.controller.UgdnSyncSolusRestController required a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' in your configuration.
+
+2019-02-25 16:27:29.664 ERROR 7532 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@12468a38] to prepare test instance [com.upl.ugdnsyncsolus.UgdnsyncsolusApplicationTests@771158fb]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ugdnSyncSolusRestController': Unsatisfied dependency expressed through field 'empService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127) ~[spring-boot-test-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.upl.ugdnsyncsolus.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 45 common frames omitted
+
