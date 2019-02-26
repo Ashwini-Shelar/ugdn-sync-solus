@@ -1,18 +1,25 @@
-package com.upl.ugdnsyncsolus.controller;
+package com.upl.ugdnsyncsolus.event;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.assertj.core.util.Preconditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.upl.ugdnsyncsolus.event.PaginatedResultsRetrievedEvent;
+import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 
-public  class PaginationDiscoverabilityListener implements ApplicationListener<PaginatedResultsRetrievedEvent> {
+@Component
+public class PaginationDiscoverabilityListener
+		implements ApplicationListener<PaginatedResultsRetrievedEvent<EmployeeDetailsModel>> {
+
+	public static final Logger logger = LoggerFactory.getLogger(PaginationDiscoverabilityListener.class);
 
 	@Override
-	public void onApplicationEvent(final PaginatedResultsRetrievedEvent ev) {
-		Preconditions.checkNotNull(ev);
+	public void onApplicationEvent(PaginatedResultsRetrievedEvent<EmployeeDetailsModel> ev) {
+		// Preconditions.checkNotNull(ev);
+		logger.info("onApplicationEvent");
 		addLinkHeaderOnPagedResourceRetrieval(ev.getUriBuilder(), ev.getResponse(), ev.getClazz(), ev.getPage(),
 				ev.getTotalPages(), ev.getPageSize());
 
@@ -22,13 +29,15 @@ public  class PaginationDiscoverabilityListener implements ApplicationListener<P
 			final HttpServletResponse response, final Class clazz, final int page, final int totalPages,
 			final int pageSize) {
 		final String resourceName = clazz.getSimpleName().toString().toLowerCase();
-		uriBuilder.path("/admin/" + resourceName);
+		uriBuilder.path("/api/ugdnsync" + resourceName);
 
-		final StringBuilder linkHeader = new StringBuilder();
+		final StringBuilder linkHeader = new StringBuilder(", ");
 		if (hasNextPage(page, totalPages)) {
 			final String uriForNextPage = constructNextPageUri(uriBuilder, page, pageSize);
+			logger.info("uriForNextPage : {}", uriForNextPage);
 			linkHeader.append(createLinkHeader(uriForNextPage, "next"));
 		}
+		logger.info("linkHeader : {}", linkHeader.toString());
 		response.addHeader("Link", linkHeader.toString());
 	}
 
@@ -38,6 +47,7 @@ public  class PaginationDiscoverabilityListener implements ApplicationListener<P
 	}
 
 	boolean hasNextPage(final int page, final int totalPages) {
+		logger.info("In hasNextPage");
 		return page < totalPages - 1;
 	}
 
@@ -48,6 +58,7 @@ public  class PaginationDiscoverabilityListener implements ApplicationListener<P
 	}
 
 	public static String createLinkHeader(final String uri, final String rel) {
+		logger.info("In createLinkHeader");
 		return "<" + uri + ">; rel=\"" + rel + "\"";
 	}
 }

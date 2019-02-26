@@ -1,5 +1,6 @@
 package com.upl.ugdnsyncsolus.service;
 
+import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -9,34 +10,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 
-
 @Repository("empService")
-public abstract class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	private JdbcTemplate jdbc;
 	
-	@Override
-	public Page<EmployeeDetailsModel> getAllEmployees(int page, int size) {
+	RowMapper<EmployeeDetailsModel> rowMapper;
+	
+	/*@Override
+	public Iterable<EmployeeDetailsModel> getAllEmployees(int page, int size) {
 		String sql = "SELECT E.UID_NO AS EUID,E.OLD_ECODE AS ECODE,E.BUS_NAME AS EBUSNAME,E.FIRST_NAME AS EFNAME,E.MIDDLE_NAME AS EMNAME,E.LAST_NAME AS ELNAME,E.DISPLAY_NAME AS EDNAME,E.DESIG AS EDESIG, E.DEPT AS EDEPT,E.PHONE AS EPHONE,E.MOBILE AS EMOB,E.MAIL_ID AS EMAILID,E.BLOOD_GROUP AS EBGROUP,E.DATE_BIRTH AS EBDATE,E.DATE_JOIN AS EJDATE,E.DATE_LEFT AS ELDATE,E.COUNTRY_NAME AS ECONCODE,E.COMPANY_CODE AS ECOMCODE, E.EMP_CATG AS ECATG,E.REGION_NAME AS EREGION,E.LOC_NAME AS ELOC,E.SUB_AREA AS ESUBAREA, E.FUNCTION AS EFUN,E.SUB_FUNCTION AS ESUBFUN ,E.ACTIVE_FLAG AS EFLAG,E.HOD_ID AS EHODID,H.DISPLAY_NAME AS HNAME, H.MAIL_ID AS HMAILID, H.DESIG AS HDESIG, AD.PARAM_NAME AS PARAM1,AD.PARAM_VALUE AS COSTCENTRE ,\r\n"
 				+ "EAD.PARAM_NAME AS PARAM2,EAD.PARAM_VALUE AS HRBAND FROM EMP_MASTER E LEFT JOIN EMP_MASTER H ON (E.HOD_ID=H.UID_NO) LEFT JOIN EMP_ADDITION_DETAILS AD ON(AD.UID_NO=E.UID_NO AND AD.PARAM_NAME='cost_center') LEFT JOIN EMP_ADDITION_DETAILS EAD ON(EAD.UID_NO=E.UID_NO AND EAD.PARAM_NAME='hr_band')";
 
 		try {
-			Page<EmployeeDetailsModel> empList = (Page<EmployeeDetailsModel>) jdbc.query(sql, new EmployeeMapper());
-			return empList;
+			// List<EmployeeDetailsModel> pagedResponse = jdbc.query(sql, rowMapper);
+			return jdbc.query(sql,this.rowMapper);
+			// return pagedResponse;
 		} catch (EmptyResultDataAccessException exp) {
 			return null;
 		}
-	}
-
+	}*/
 	
 	
-	/*@Override
+	
+	@Override
 	public List<EmployeeDetailsModel> getAllEmployees() {
 		String sql = "SELECT E.UID_NO AS EUID,E.OLD_ECODE AS ECODE,E.BUS_NAME AS EBUSNAME,E.FIRST_NAME AS EFNAME,E.MIDDLE_NAME AS EMNAME,E.LAST_NAME AS ELNAME,E.DISPLAY_NAME AS EDNAME,E.DESIG AS EDESIG, E.DEPT AS EDEPT,E.PHONE AS EPHONE,E.MOBILE AS EMOB,E.MAIL_ID AS EMAILID,E.BLOOD_GROUP AS EBGROUP,E.DATE_BIRTH AS EBDATE,E.DATE_JOIN AS EJDATE,E.DATE_LEFT AS ELDATE,E.COUNTRY_NAME AS ECONCODE,E.COMPANY_CODE AS ECOMCODE, E.EMP_CATG AS ECATG,E.REGION_NAME AS EREGION,E.LOC_NAME AS ELOC,E.SUB_AREA AS ESUBAREA, E.FUNCTION AS EFUN,E.SUB_FUNCTION AS ESUBFUN ,E.ACTIVE_FLAG AS EFLAG,E.HOD_ID AS EHODID,H.DISPLAY_NAME AS HNAME, H.MAIL_ID AS HMAILID, H.DESIG AS HDESIG, AD.PARAM_NAME AS PARAM1,AD.PARAM_VALUE AS COSTCENTRE ,\r\n"
 				+ "EAD.PARAM_NAME AS PARAM2,EAD.PARAM_VALUE AS HRBAND FROM EMP_MASTER E LEFT JOIN EMP_MASTER H ON (E.HOD_ID=H.UID_NO) LEFT JOIN EMP_ADDITION_DETAILS AD ON(AD.UID_NO=E.UID_NO AND AD.PARAM_NAME='cost_center') LEFT JOIN EMP_ADDITION_DETAILS EAD ON(EAD.UID_NO=E.UID_NO AND EAD.PARAM_NAME='hr_band')";
@@ -47,7 +52,7 @@ public abstract class EmployeeServiceImpl implements EmployeeService {
 		} catch (EmptyResultDataAccessException exp) {
 			return null;
 		}
-	}*/
+	}
 
 	public static final class EmployeeMapper implements RowMapper<EmployeeDetailsModel> {
 
@@ -143,7 +148,6 @@ public abstract class EmployeeServiceImpl implements EmployeeService {
 			return emp;
 		}
 	}
-
 
 	
 }
