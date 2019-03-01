@@ -7,7 +7,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.web.util.UriComponentsBuilder;
 
-public final class PaginatedResultsRetrievedEvent<T extends Serializable> extends ApplicationEvent {
+import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
+
+// public final class PaginatedResultsRetrievedEvent<T extends Serializable> extends ApplicationEvent {
+public final class PaginatedResultsRetrievedEvent extends ApplicationEvent {
 	/**
 	 * 
 	 */
@@ -18,9 +21,9 @@ public final class PaginatedResultsRetrievedEvent<T extends Serializable> extend
 	private final int totalPages;
 	private final int pageSize;
 
-	public PaginatedResultsRetrievedEvent(final Class<T> clazz, final UriComponentsBuilder uriBuilderToSet,
-			final HttpServletResponse responseToSet, final int pageToSet, final int totalPagesToSet,
-			final int pageSizeToSet) {
+	public PaginatedResultsRetrievedEvent(final Class<EmployeeDetailsModel> clazz,
+			final UriComponentsBuilder uriBuilderToSet, final HttpServletResponse responseToSet, final int pageToSet,
+			final int totalPagesToSet, final int pageSizeToSet) {
 		super(clazz);
 
 		this.uriBuilder = uriBuilderToSet;
@@ -53,8 +56,8 @@ public final class PaginatedResultsRetrievedEvent<T extends Serializable> extend
 	}
 
 	@SuppressWarnings("unchecked")
-	public final Class<T> getClazz() {
-		return (Class<T>) getSource();
+	public final Class<EmployeeDetailsModel> getClazz() {
+		return (Class<EmployeeDetailsModel>) getSource();
 	}
 
 }

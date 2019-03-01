@@ -1,12 +1,6 @@
 package com.upl.ugdnsyncsolus.model;
 
-import java.io.Serializable;
-
-public class EmployeeDetailsModel implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class EmployeeDetailsModel {
 	private String uid_no;
 	private String old_ecode;
 	private String bus_name;

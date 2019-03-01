@@ -20,7 +20,7 @@ public class PaginatedEventPublisher implements ApplicationEventPublisherAware {
 		this.publisher = applicationEventPublisher;
 	}
 
-	public void publish(PaginatedResultsRetrievedEvent<EmployeeDetailsModel> appEventA) {
+	public void publish(PaginatedResultsRetrievedEvent appEventA) {
 		logger.info("In publisher");
         this.publisher.publishEvent(appEventA);
         logger.info("Completed publisher");

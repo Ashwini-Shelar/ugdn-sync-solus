@@ -11,13 +11,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 
 @Component
-public class PaginationDiscoverabilityListener
-		implements ApplicationListener<PaginatedResultsRetrievedEvent<EmployeeDetailsModel>> {
+public class PaginationDiscoverabilityListener implements ApplicationListener<PaginatedResultsRetrievedEvent> {
 
 	public static final Logger logger = LoggerFactory.getLogger(PaginationDiscoverabilityListener.class);
 
 	@Override
-	public void onApplicationEvent(PaginatedResultsRetrievedEvent<EmployeeDetailsModel> ev) {
+	public void onApplicationEvent(PaginatedResultsRetrievedEvent ev) {
 		// Preconditions.checkNotNull(ev);
 		logger.info("onApplicationEvent");
 		addLinkHeaderOnPagedResourceRetrieval(ev.getUriBuilder(), ev.getResponse(), ev.getClazz(), ev.getPage(),
@@ -29,9 +28,9 @@ public class PaginationDiscoverabilityListener
 			final HttpServletResponse response, final Class clazz, final int page, final int totalPages,
 			final int pageSize) {
 		final String resourceName = clazz.getSimpleName().toString().toLowerCase();
-		uriBuilder.path("/api/ugdnsync" + resourceName);
+		uriBuilder.path("/api/ugdnsync");
 
-		final StringBuilder linkHeader = new StringBuilder(", ");
+		final StringBuilder linkHeader = new StringBuilder();
 		if (hasNextPage(page, totalPages)) {
 			final String uriForNextPage = constructNextPageUri(uriBuilder, page, pageSize);
 			logger.info("uriForNextPage : {}", uriForNextPage);
@@ -51,11 +50,11 @@ public class PaginationDiscoverabilityListener
 		return page < totalPages - 1;
 	}
 
-	void appendCommaIfNecessary(final StringBuilder linkHeader) {
+	/*void appendCommaIfNecessary(final StringBuilder linkHeader) {
 		if (linkHeader.length() > 0) {
 			linkHeader.append(", ");
 		}
-	}
+	}*/
 
 	public static String createLinkHeader(final String uri, final String rel) {
 		logger.info("In createLinkHeader");

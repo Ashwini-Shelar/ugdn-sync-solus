@@ -3,11 +3,12 @@ package com.upl.ugdnsyncsolus.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.QueryParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.upl.ugdnsyncsolus.event.PaginatedEventPublisher;
 import com.upl.ugdnsyncsolus.event.PaginatedResultsRetrievedEvent;
 import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 import com.upl.ugdnsyncsolus.service.EmployeeService;
@@ -35,14 +35,18 @@ public class UgdnSyncSolusRestController {
 	@Autowired
 	EmployeeServiceImpl empServiceImpl;
 
+	/*
+	 * @Autowired PaginatedEventPublisher paginatedEventPublisher;
+	 */
+
 	@Autowired
-	PaginatedEventPublisher applicationEventPublisher;
-	
-	@Value("${pageNumber}")
-	int pageNumber;
-	
-	@Value("${pageSize}")
-	int pageSize;
+	ApplicationEventPublisher applicationEventPublisher;
+
+	/*
+	 * @Value("${pageNumber}") int page;
+	 * 
+	 * @Value("${pageSize}") int size;
+	 */
 
 	/*
 	 * @RequestMapping(value = "/ugdn", method = RequestMethod.GET) public
@@ -54,37 +58,38 @@ public class UgdnSyncSolusRestController {
 	 * ResponseEntity<List<EmployeeDetailsModel>>(empList, HttpStatus.OK); }
 	 */
 
-	@GetMapping(value = "/ugdnsync")
-	public List<EmployeeDetailsModel> findPaginated(UriComponentsBuilder uriBuilder, HttpServletResponse response) {
+	@GetMapping(value = "/ugdnsync", params = { "page", "size" })
+	public List<EmployeeDetailsModel> findPaginated(@RequestParam("page") int page, @RequestParam("size") int size,
+			UriComponentsBuilder uriBuilder, HttpServletResponse response,
+			@QueryParam("fullList") String fullList, @QueryParam("updateOnly") String updateOnly,
+			@QueryParam("newOnly") String newOnly, @QueryParam("deleteOnly") String deleteOnly) {
+		
 		logger.info("In controller");
 
-		List<EmployeeDetailsModel> resultPage = empService.getAllEmployees();
+		List<EmployeeDetailsModel> resultPage = empService.getAllEmployees(fullList,updateOnly,newOnly,deleteOnly);
 		logger.info("result list size: {}", resultPage.size());
-		
-		Pageable pageable  = new PageRequest(pageNumber, pageSize);
+
+		Pageable pageable = new PageRequest(page, size);
 
 		int start = pageable.getOffset();
-		int end = (start + pageNumber) > resultPage.size() ? resultPage.size() : (start + pageNumber);
-		// int endSize = (start + pageSize) > resultPage.size() ? resultPage.size() : (start + pageSize);
+		int end = (start + size) > resultPage.size() ? resultPage.size() : (start + size);
 		Page<EmployeeDetailsModel> pages = new PageImpl<EmployeeDetailsModel>(resultPage.subList(start, end), pageable,
 				resultPage.size());
 
 		logger.info("start: {}, end: {}", start, end);
 		logger.info("pages: {}", pages);
 		logger.info("pages.getTotalPages: {}", pages.getTotalPages());
-		
-		// Page<EmployeeDetailsModel> resultPage = empService.getAllEmployees(page,
-		// size);
-		if (pageNumber > pages.getTotalPages()) {
+
+		if (page > pages.getTotalPages()) {
 			// throw new MyResourceNotFoundException();
 		}
 
-		applicationEventPublisher.publish(new PaginatedResultsRetrievedEvent<EmployeeDetailsModel>(
-				EmployeeDetailsModel.class, uriBuilder, response, pageNumber, pages.getTotalPages(), pageSize));
+		PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
+				uriBuilder, response, page, pages.getTotalPages(), size);
+		applicationEventPublisher.publishEvent(event);
 
-		logger.info("pages.getContent: {}", pages.getContent());
-		logger.info("response: {}", response);
-		
+		logger.debug("pages.getContent: {}", pages.getContent());
+
 		return pages.getContent();
 	}
 
@@ -93,5 +98,29 @@ public class UgdnSyncSolusRestController {
 		logger.info("In controller");
 		return "Hello";
 	}
+
+	/*
+	 * @GetMapping(value = "/products") public ResponseEntity < PagedResources <
+	 * EmployeeDetailsModel >> AllProducts(Pageable pageable,
+	 * PageableArgumentResolver assembler) { Page < EmployeeDetailsModel > products
+	 * = empService.findAllProducts(pageable); PagedResources < EmployeeDetailsModel
+	 * > pr = assembler.toResource(products,
+	 * linkTo(UgdnSyncSolusRestController.class).slash("/products").withSelfRel());
+	 * HttpHeaders responseHeaders = new HttpHeaders(); responseHeaders.add("Link",
+	 * createLinkHeader(pr)); return new ResponseEntity < >
+	 * (assembler.toResource(products,
+	 * linkTo(UgdnSyncSolusRestController.class).slash("/products").withSelfRel()),
+	 * responseHeaders, HttpStatus.OK); }
+	 * 
+	 * private String createLinkHeader(PagedResources < EmployeeDetailsModel > pr) {
+	 * final StringBuilder linkHeader = new StringBuilder();
+	 * linkHeader.append(buildLinkHeader(pr.getLinks("first").get(0).getHref(),
+	 * "first")); linkHeader.append(", ");
+	 * linkHeader.append(buildLinkHeader(pr.getLinks("next").get(0).getHref(),
+	 * "next")); return linkHeader.toString(); }
+	 * 
+	 * public static String buildLinkHeader(final String uri, final String rel) {
+	 * return "<" + uri + ">; rel=\"" + rel + "\""; } }
+	 */
 
 }
