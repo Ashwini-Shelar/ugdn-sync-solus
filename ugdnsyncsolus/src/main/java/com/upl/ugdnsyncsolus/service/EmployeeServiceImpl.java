@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.github.pagehelper.Page;
 import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 
 @Repository("empService")
@@ -45,7 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 
 		try {
-			List<EmployeeDetailsModel> empList = jdbc.query(sql, new EmployeeMapper());
+			List<EmployeeDetailsModel> empList = jdbc.query(sql + orderBy, new EmployeeMapper());
 			return empList;
 		} catch (EmptyResultDataAccessException exp) {
 			return null;
@@ -145,6 +146,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 			return emp;
 		}
+
 	}
 
 }

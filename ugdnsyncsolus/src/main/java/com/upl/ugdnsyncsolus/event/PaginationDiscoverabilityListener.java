@@ -8,7 +8,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
 
 @Component
 public class PaginationDiscoverabilityListener implements ApplicationListener<PaginatedResultsRetrievedEvent> {
@@ -17,8 +16,7 @@ public class PaginationDiscoverabilityListener implements ApplicationListener<Pa
 
 	@Override
 	public void onApplicationEvent(PaginatedResultsRetrievedEvent ev) {
-		// Preconditions.checkNotNull(ev);
-		logger.info("onApplicationEvent");
+		logger.debug("PaginationDiscoverabilityListener - onApplicationEvent");
 		addLinkHeaderOnPagedResourceRetrieval(ev.getUriBuilder(), ev.getResponse(), ev.getClazz(), ev.getPage(),
 				ev.getTotalPages(), ev.getPageSize());
 
@@ -27,13 +25,13 @@ public class PaginationDiscoverabilityListener implements ApplicationListener<Pa
 	void addLinkHeaderOnPagedResourceRetrieval(final UriComponentsBuilder uriBuilder,
 			final HttpServletResponse response, final Class clazz, final int page, final int totalPages,
 			final int pageSize) {
-		final String resourceName = clazz.getSimpleName().toString().toLowerCase();
-		uriBuilder.path("/api/ugdnsync");
+		// final String resourceName = clazz.getSimpleName().toString().toLowerCase();
+		uriBuilder.path("/api/ugdnsync/pages");
 
 		final StringBuilder linkHeader = new StringBuilder();
 		if (hasNextPage(page, totalPages)) {
 			final String uriForNextPage = constructNextPageUri(uriBuilder, page, pageSize);
-			logger.info("uriForNextPage : {}", uriForNextPage);
+			logger.trace("uriForNextPage : {}", uriForNextPage);
 			linkHeader.append(createLinkHeader(uriForNextPage, "next"));
 		}
 		logger.info("linkHeader : {}", linkHeader.toString());
@@ -46,18 +44,12 @@ public class PaginationDiscoverabilityListener implements ApplicationListener<Pa
 	}
 
 	boolean hasNextPage(final int page, final int totalPages) {
-		logger.info("In hasNextPage");
-		return page < totalPages - 1;
+		logger.trace("hasNextPage = true");
+		return page < totalPages;
 	}
 
-	/*void appendCommaIfNecessary(final StringBuilder linkHeader) {
-		if (linkHeader.length() > 0) {
-			linkHeader.append(", ");
-		}
-	}*/
-
 	public static String createLinkHeader(final String uri, final String rel) {
-		logger.info("In createLinkHeader");
+		logger.trace("Creating link header");
 		return "<" + uri + ">; rel=\"" + rel + "\"";
 	}
 }

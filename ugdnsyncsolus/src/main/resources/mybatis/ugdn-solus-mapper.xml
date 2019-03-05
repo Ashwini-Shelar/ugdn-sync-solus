@@ -1,0 +1,112 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.upl.ugdnsyncsolus.mapper.EmployeeMapper">
+
+	<sql id="getEmployees">
+		SELECT
+		E.UID_NO AS uid_no,
+		E.OLD_ECODE AS old_ecode,
+		E.BUS_NAME AS
+		bus_name,
+		E.FIRST_NAME AS first_name,
+		E.MIDDLE_NAME AS
+		middle_name,
+		E.LAST_NAME AS
+		last_name,
+		E.DISPLAY_NAME AS display_name,
+		E.DESIG AS
+		desig,
+		E.DEPT AS
+		dept,
+		E.PHONE AS phone,
+		E.MOBILE AS mobile,
+		E.MAIL_ID AS
+		mail_id,
+		E.BLOOD_GROUP AS blood_group,
+		E.DATE_BIRTH AS
+		date_birth,
+		E.DATE_JOIN AS
+		date_join,
+		E.DATE_LEFT AS date_left,
+		E.COUNTRY_NAME AS
+		country_name,
+		E.COMPANY_CODE AS company_code,
+		E.EMP_CATG AS emp_catg,
+		E.REGION_NAME AS
+		region_name,
+		E.LOC_NAME AS
+		loc_name,
+		E.SUB_AREA AS
+		sub_area,
+		E.FUNCTION AS
+		function,
+		E.SUB_FUNCTION AS
+		sub_function ,
+		E.ACTIVE_FLAG AS active_flag,
+		E.HOD_ID AS hod_id,
+		H.DISPLAY_NAME AS
+		hod_name,
+		H.MAIL_ID AS hod_mail_id,
+		H.DESIG AS
+		hod_desig,
+		AD.PARAM_NAME
+		AS PARAM1,
+		AD.PARAM_VALUE AS
+		cost_centre ,
+		EAD.PARAM_NAME AS PARAM2,
+		EAD.PARAM_VALUE AS hr_band
+		FROM
+		EMP_MASTER E
+		LEFT JOIN
+		EMP_MASTER H ON
+		(E.HOD_ID=H.UID_NO)
+		LEFT JOIN
+		EMP_ADDITION_DETAILS AD
+		ON(AD.UID_NO=E.UID_NO AND
+		AD.PARAM_NAME='cost_center')
+		LEFT JOIN
+		EMP_ADDITION_DETAILS EAD
+		ON(EAD.UID_NO=E.UID_NO AND
+		EAD.PARAM_NAME='hr_band')
+		<!-- LEFT JOIN
+		UGDN_SYNC_OTHER_APPS SYNCAPP
+		ON (E.UID_NO=SYNCAPP.UID_NO)
+		 where
+		SYNCAPP.APP_CODE='ARIBA' -->
+	</sql>
+
+	<select id="getAllEmployeesPaginated" resultType="com.upl.ugdnsyncsolus.model.EmployeeDetailsModel">
+
+		<include refid="getEmployees" />
+			order by E.UID_NO asc
+			
+		<!-- <if test="fullList != null">
+			<include refid="getEmployees" />
+			order by E.UID_NO asc
+		</if>
+
+		<if test="updateOnly != null">
+			<include refid="getEmployees" />
+			AND SYNCAPP.APP_ACTION_CODE='UPDATE'
+			order by
+			E.UID_NO asc
+		</if>
+
+		<if test="newOnly != null">
+			<include refid="getEmployees" />
+			AND SYNCAPP.APP_ACTION_CODE='NEW'
+			order by
+			E.UID_NO asc
+		</if>
+
+		<if test="deleteOnly != null">
+			<include refid="getEmployees" />
+			AND SYNCAPP.APP_ACTION_CODE='DELETE'
+			order by
+			E.UID_NO asc
+		</if>
+ -->
+	</select>
+
+</mapper>
