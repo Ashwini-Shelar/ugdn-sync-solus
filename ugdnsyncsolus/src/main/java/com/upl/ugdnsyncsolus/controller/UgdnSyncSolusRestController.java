@@ -56,7 +56,8 @@ public class UgdnSyncSolusRestController {
 	@GetMapping(value = "/ugdnsync")
 	public List<EmployeeDetailsModel> findPaginated(UriComponentsBuilder uriBuilder, HttpServletResponse response) {
 
-		logger.info("In controller");
+		logger.info("Started getting data for page : {} and size : {}", page, size);
+
 		PageHelper.startPage(page, size);
 		Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated();
 
@@ -69,20 +70,21 @@ public class UgdnSyncSolusRestController {
 
 		logger.trace("pages.getContent: {}", resultPage.getResult());
 
+		logger.info("Completed getting data for page : {} and size : {}", page, size);
 		return resultPage.getResult();
+
 	}
 
 	@GetMapping(value = "/ugdnsync/pages", params = { "page", "size" })
 	public List<EmployeeDetailsModel> findNextPages(@RequestParam("page") int page, @RequestParam("size") int size,
 			UriComponentsBuilder uriBuilder, HttpServletResponse response) {
 
-		logger.info("In controller - findNextPages");
+		logger.info("Started getting data for page : {} and size : {}", page, size);
 
 		PageHelper.startPage(page, size);
 		Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated();
 
-		logger.info("page ={}, size= {}, resultPage - {}, content size = {}", page, size, resultPage.getPages(),
-				resultPage.getResult().size());
+		logger.debug("resultPage - {}, content size = {}", resultPage.getPages(), resultPage.getResult().size());
 
 		PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
 				uriBuilder, response, page, resultPage.getPages(), size);
@@ -90,6 +92,7 @@ public class UgdnSyncSolusRestController {
 
 		logger.trace("pages.getContent: {}", resultPage.getResult());
 
+		logger.info("Completed getting data for page : {} and size : {}", page, size);
 		return resultPage.getResult();
 	}
 
