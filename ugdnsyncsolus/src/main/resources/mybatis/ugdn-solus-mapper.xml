@@ -51,7 +51,8 @@
 		H.DESIG AS
 		hod_desig,
 		AD.PARAM_NAME
-		AS PARAM1,
+		AS
+		PARAM1,
 		AD.PARAM_VALUE AS
 		cost_centre ,
 		EAD.PARAM_NAME AS PARAM2,
@@ -69,44 +70,90 @@
 		EMP_ADDITION_DETAILS EAD
 		ON(EAD.UID_NO=E.UID_NO AND
 		EAD.PARAM_NAME='hr_band')
-		<!-- LEFT JOIN
-		UGDN_SYNC_OTHER_APPS SYNCAPP
-		ON (E.UID_NO=SYNCAPP.UID_NO)
-		 where
-		SYNCAPP.APP_CODE='ARIBA' -->
+		<!-- LEFT JOIN UGDN_SYNC_OTHER_APPS SYNCAPP ON (E.UID_NO=SYNCAPP.UID_NO) 
+			where SYNCAPP.APP_CODE='ARIBA' -->
 	</sql>
 
 	<select id="getAllEmployeesPaginated" resultType="com.upl.ugdnsyncsolus.model.EmployeeDetailsModel">
 
 		<include refid="getEmployees" />
-			order by E.UID_NO asc
-			
-		<!-- <if test="fullList != null">
-			<include refid="getEmployees" />
-			order by E.UID_NO asc
-		</if>
+		order by E.UID_NO asc
 
-		<if test="updateOnly != null">
-			<include refid="getEmployees" />
-			AND SYNCAPP.APP_ACTION_CODE='UPDATE'
-			order by
-			E.UID_NO asc
-		</if>
-
-		<if test="newOnly != null">
-			<include refid="getEmployees" />
-			AND SYNCAPP.APP_ACTION_CODE='NEW'
-			order by
-			E.UID_NO asc
-		</if>
-
-		<if test="deleteOnly != null">
-			<include refid="getEmployees" />
-			AND SYNCAPP.APP_ACTION_CODE='DELETE'
-			order by
-			E.UID_NO asc
-		</if>
- -->
+		<!-- <if test="fullList != null"> <include refid="getEmployees" /> order 
+			by E.UID_NO asc </if> <if test="updateOnly != null"> <include refid="getEmployees" 
+			/> AND SYNCAPP.APP_ACTION_CODE='UPDATE' order by E.UID_NO asc </if> <if test="newOnly 
+			!= null"> <include refid="getEmployees" /> AND SYNCAPP.APP_ACTION_CODE='NEW' 
+			order by E.UID_NO asc </if> <if test="deleteOnly != null"> <include refid="getEmployees" 
+			/> AND SYNCAPP.APP_ACTION_CODE='DELETE' order by E.UID_NO asc </if> -->
 	</select>
+
+
+	<!-- <delete id="deleteRecordsFromAppSync"> DELETE FROM UGDN_SYNC_OTHER_APPS 
+		WHERE APP_CODE='SOLUS' AND UID_NO IN <foreach item="element" collection="responseList" 
+		separator="," open="(" close=")"> #{element.uid_no} </foreach> </delete> -->
+
+	<insert id="insertApp" useGeneratedKeys="true">
+
+		<selectKey keyProperty="ROW_ID" resultType="int" order="BEFORE">
+			SELECT
+			KEYS_EMP_ADDITION_DETAILS.nextVal from dual
+		</selectKey>
+
+		INSERT INTO UGDN_SYNC_OTHER_APPS
+		(ROW_ID,UID_NO,LOG_DATE,APP_CODE,APP_ACTION_CODE,SYNC_STATUS,SYNC_DATE)
+		VALUES (#{ROW_ID},'30006338',sysdate,'SOLUS','NEW','pending',sysdate)
+	</insert>
+
+	<update id="updateRecordsInAppSync">
+		BEGIN
+		<foreach collection="list" item="record" index="index"
+			separator=";">
+			UPDATE UGDN_SYNC_OTHER_APPS SET
+			SYNC_STATUS=#{record.status},
+			SYNC_DATE=SYSDATE
+			WHERE
+			UID_NO=#{record.uid_no} and
+			APP_CODE='SOLUS'
+		</foreach>
+		;
+		END;
+	</update>
+
+	<insert id="insertEmpAddtnDtls" useGeneratedKeys="true">
+
+		<selectKey keyProperty="EMP_ID" resultType="int" order="BEFORE">
+			SELECT
+			KEYS_EMP_ADDITION_DETAILS.nextVal from dual
+		</selectKey>
+
+		INSERT INTO EMP_ADDITION_DETAILS
+		(EMP_ID,UID_NO,PARAM_NAME,PARAM_VALUE,FILL_DATE,UPDATE_DATE,ACTIVE_FLAG)
+		VALUES (17456,'30006337','solus_id','1234',sysdate,sysdate,1)
+	</insert>
+
+	<delete id="deleteFromAddtnDetails">
+		DELETE FROM EMP_ADDITION_DETAILS
+		WHERE PARAM_NAME='solus_id' AND UID_NO
+		IN
+		<foreach item="element" collection="list" separator="," open="("
+			close=")">
+			#{element.uid_no}
+		</foreach>
+	</delete>
+
+	<insert id="insertInAddtnDetails"
+		parameterType="com.upl.ugdnsyncsolus.model.SolusResponseModel">
+
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			SELECT
+			KEYS_EMP_ADDITION_DETAILS.nextVal from dual
+		</selectKey>
+
+		INSERT INTO EMP_ADDITION_DETAILS
+		(EMP_ID,UID_NO,PARAM_NAME,PARAM_VALUE,FILL_DATE,UPDATE_DATE,ACTIVE_FLAG)
+		VALUES
+		(#{id},#{uid_no},'solus_id',#{solus_id},sysdate,sysdate,1)
+
+	</insert>
 
 </mapper>
