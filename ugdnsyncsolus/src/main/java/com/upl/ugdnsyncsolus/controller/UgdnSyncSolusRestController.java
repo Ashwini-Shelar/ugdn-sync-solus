@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -52,7 +53,8 @@ public class UgdnSyncSolusRestController {
 
 	String filterQuery;
 
-	@GetMapping(value = "/ugdnsync")
+	@CrossOrigin
+	@PostMapping(value = "/ugdnsync")
 	public List<EmployeeDetailsModel> findPaginated(UriComponentsBuilder uriBuilder, HttpServletResponse response) {
 
 		logger.info("Started getting data for page : {} and size : {}", page, size);
@@ -74,7 +76,8 @@ public class UgdnSyncSolusRestController {
 
 	}
 
-	@GetMapping(value = "/ugdnsync/pages", params = { "page", "size" })
+	@CrossOrigin
+	@PostMapping(value = "/ugdnsync/pages", params = { "page", "size" })
 	public List<EmployeeDetailsModel> findNextPages(@RequestParam("page") int page, @RequestParam("size") int size,
 			UriComponentsBuilder uriBuilder, HttpServletResponse response) {
 
@@ -95,6 +98,7 @@ public class UgdnSyncSolusRestController {
 		return resultPage.getResult();
 	}
 
+	@CrossOrigin
 	@PostMapping(value = "/ugdnsync/solusresponse")
 	public void getSolusResponse(@RequestBody String solusResponse) {
 		logger.info("Received response from solus and sent for parsing.");
