@@ -20,10 +20,11 @@ public final class PaginatedResultsRetrievedEvent extends ApplicationEvent {
 	private final int page;
 	private final int totalPages;
 	private final int pageSize;
+	private final String filterQuery;
 
 	public PaginatedResultsRetrievedEvent(final Class<EmployeeDetailsModel> clazz,
 			final UriComponentsBuilder uriBuilderToSet, final HttpServletResponse responseToSet, final int pageToSet,
-			final int totalPagesToSet, final int pageSizeToSet) {
+			final int totalPagesToSet, final int pageSizeToSet, final String filterQueryToSet) {
 		super(clazz);
 
 		this.uriBuilder = uriBuilderToSet;
@@ -31,6 +32,7 @@ public final class PaginatedResultsRetrievedEvent extends ApplicationEvent {
 		this.page = pageToSet;
 		this.totalPages = totalPagesToSet;
 		this.pageSize = pageSizeToSet;
+		this.filterQuery = filterQueryToSet;
 	}
 
 	// API
@@ -58,6 +60,10 @@ public final class PaginatedResultsRetrievedEvent extends ApplicationEvent {
 	@SuppressWarnings("unchecked")
 	public final Class<EmployeeDetailsModel> getClazz() {
 		return (Class<EmployeeDetailsModel>) getSource();
+	}
+
+	public final String getFilterQuery() {
+		return filterQuery;
 	}
 
 }

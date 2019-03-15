@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.QueryParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,7 @@ import com.github.pagehelper.PageHelper;
 import com.upl.ugdnsyncsolus.event.PaginatedResultsRetrievedEvent;
 import com.upl.ugdnsyncsolus.mapper.EmployeeMapper;
 import com.upl.ugdnsyncsolus.model.EmployeeDetailsModel;
+import com.upl.ugdnsyncsolus.model.FilterQueryModel;
 import com.upl.ugdnsyncsolus.model.SolusResponseModel;
 import com.upl.ugdnsyncsolus.service.EmployeeService;
 import com.upl.ugdnsyncsolus.service.EmployeeServiceImpl;
@@ -55,47 +57,70 @@ public class UgdnSyncSolusRestController {
 
 	@CrossOrigin
 	@PostMapping(value = "/ugdnsync")
-	public List<EmployeeDetailsModel> findPaginated(UriComponentsBuilder uriBuilder, HttpServletResponse response) {
+	public List<EmployeeDetailsModel> findPaginated(UriComponentsBuilder uriBuilder, HttpServletResponse response,
+			@QueryParam("fullList") String fullList, @QueryParam("updateOnly") String updateOnly,
+			@QueryParam("newOnly") String newOnly, @QueryParam("deleteOnly") String deleteOnly) throws IOException {
 
-		logger.info("Started getting data for page : {} and size : {}", page, size);
+		FilterQueryModel filterQueryModel = new FilterQueryModel();
+		filterQuery = fullList != null ? "fullList"
+				: updateOnly != null ? "updateOnly"
+						: newOnly != null ? "newOnly" : deleteOnly != null ? "deleteOnly" : null;
 
-		PageHelper.startPage(page, size);
-		Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated();
+		filterQueryModel.setFilterQuery(filterQuery);
 
-		logger.info("page ={}, size= {}, resultPage - {}, content size = {}", page, size, resultPage.getPages(),
-				resultPage.getResult().size());
+		logger.info("Started getting data for page : {} , size : {} and filter query : {} ", page, size, filterQuery);
 
-		PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
-				uriBuilder, response, page, resultPage.getPages(), size);
-		applicationEventPublisher.publishEvent(event);
+		if (filterQuery != null) {
+			PageHelper.startPage(page, size);
+			Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated(filterQueryModel);
 
-		logger.trace("pages.getContent: {}", resultPage.getResult());
+			logger.debug("page ={}, size= {}, resultPage - {}, content size = {}", page, size, resultPage.getPages(),
+					resultPage.getResult().size());
 
-		logger.info("Completed getting data for page : {} and size : {}", page, size);
-		return resultPage.getResult();
+			PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
+					uriBuilder, response, page, resultPage.getPages(), size, filterQueryModel.getFilterQuery());
+			applicationEventPublisher.publishEvent(event);
+
+			logger.trace("pages.getContent: {}", resultPage.getResult());
+
+			logger.info("Completed getting data for page : {} and size : {}", page, size);
+			return resultPage.getResult();
+		} else {
+			response.setStatus(400);
+			return null;
+		}
 
 	}
 
 	@CrossOrigin
-	@PostMapping(value = "/ugdnsync/pages", params = { "page", "size" })
+	@PostMapping(value = "/ugdnsync/pages", params = { "page", "size", "filterquery" })
 	public List<EmployeeDetailsModel> findNextPages(@RequestParam("page") int page, @RequestParam("size") int size,
-			UriComponentsBuilder uriBuilder, HttpServletResponse response) {
+			@RequestParam("filterquery") String filterquery, UriComponentsBuilder uriBuilder,
+			HttpServletResponse response) throws IOException {
 
-		logger.info("Started getting data for page : {} and size : {}", page, size);
+		logger.info("Started getting data for page : {} , size : {} and filter query : {} ", page, size, filterquery);
 
-		PageHelper.startPage(page, size);
-		Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated();
+		if (filterquery != null) {
+			FilterQueryModel filterQueryModel = new FilterQueryModel();
+			filterQueryModel.setFilterQuery(filterquery);
 
-		logger.debug("resultPage - {}, content size = {}", resultPage.getPages(), resultPage.getResult().size());
+			PageHelper.startPage(page, size);
+			Page<EmployeeDetailsModel> resultPage = empMapper.getAllEmployeesPaginated(filterQueryModel);
 
-		PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
-				uriBuilder, response, page, resultPage.getPages(), size);
-		applicationEventPublisher.publishEvent(event);
+			logger.debug("resultPage - {}, content size = {}", resultPage.getPages(), resultPage.getResult().size());
 
-		logger.trace("pages.getContent: {}", resultPage.getResult());
+			PaginatedResultsRetrievedEvent event = new PaginatedResultsRetrievedEvent(EmployeeDetailsModel.class,
+					uriBuilder, response, page, resultPage.getPages(), size, filterQueryModel.getFilterQuery());
+			applicationEventPublisher.publishEvent(event);
 
-		logger.info("Completed getting data for page : {} and size : {}", page, size);
-		return resultPage.getResult();
+			logger.trace("pages.getContent: {}", resultPage.getResult());
+
+			logger.info("Completed getting data for page : {} and size : {}", page, size);
+			return resultPage.getResult();
+		} else {
+			response.setStatus(400);
+			return null;
+		}
 	}
 
 	@CrossOrigin

@@ -70,21 +70,31 @@
 		EMP_ADDITION_DETAILS EAD
 		ON(EAD.UID_NO=E.UID_NO AND
 		EAD.PARAM_NAME='hr_band')
-		<!-- LEFT JOIN UGDN_SYNC_OTHER_APPS SYNCAPP ON (E.UID_NO=SYNCAPP.UID_NO) 
-			where SYNCAPP.APP_CODE='ARIBA' -->
+		LEFT JOIN UGDN_SYNC_OTHER_APPS SYNCAPP ON (E.UID_NO=SYNCAPP.UID_NO) 
+			where SYNCAPP.APP_CODE='SOLUS' 
 	</sql>
 
 	<select id="getAllEmployeesPaginated" resultType="com.upl.ugdnsyncsolus.model.EmployeeDetailsModel">
 
-		<include refid="getEmployees" />
-		order by E.UID_NO asc
-
-		<!-- <if test="fullList != null"> <include refid="getEmployees" /> order 
-			by E.UID_NO asc </if> <if test="updateOnly != null"> <include refid="getEmployees" 
-			/> AND SYNCAPP.APP_ACTION_CODE='UPDATE' order by E.UID_NO asc </if> <if test="newOnly 
-			!= null"> <include refid="getEmployees" /> AND SYNCAPP.APP_ACTION_CODE='NEW' 
-			order by E.UID_NO asc </if> <if test="deleteOnly != null"> <include refid="getEmployees" 
-			/> AND SYNCAPP.APP_ACTION_CODE='DELETE' order by E.UID_NO asc </if> -->
+            <if test="filterQuery == 'fullList'"> 
+                <include refid="getEmployees" /> 
+                order by E.UID_NO asc 
+            </if> 
+                    
+            <if test="filterQuery == 'updateOnly'"> 
+                <include refid="getEmployees" /> 
+                AND SYNCAPP.APP_ACTION_CODE='UPDATE' order by E.UID_NO asc 
+                </if> 
+                
+            <if test="filterQuery == 'newOnly'"> 
+                <include refid="getEmployees" /> 
+                AND SYNCAPP.APP_ACTION_CODE='NEW' order by E.UID_NO asc
+            </if> 
+                
+            <if test="filterQuery == 'deleteOnly'"> 
+                <include refid="getEmployees" /> 
+                AND SYNCAPP.APP_ACTION_CODE='DELETE' order by E.UID_NO asc 
+            </if> 
 	</select>
 
 
@@ -155,5 +165,6 @@
 		(#{id},#{uid_no},'solus_id',#{solus_id},sysdate,sysdate,1)
 
 	</insert>
+
 
 </mapper>
