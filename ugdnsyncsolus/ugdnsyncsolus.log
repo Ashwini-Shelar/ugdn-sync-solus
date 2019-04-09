@@ -1,140 +1,99 @@
-2019-03-15 13:56:57.088  INFO 13440 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Starting UgdnsyncsolusApplicationTests on UBAN_30006337 with PID 13440 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 13:56:57.094  INFO 13440 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : No active profile set, falling back to default profiles: default
-2019-03-15 13:57:05.388  INFO 13440 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 13:57:07.236  INFO 13440 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Started UgdnsyncsolusApplicationTests in 11.472 seconds (JVM running for 14.288)
-2019-03-15 13:57:08.857  INFO 13440 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:01:06.973  INFO 9996 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 9996 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 14:01:06.978  INFO 9996 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
-2019-03-15 14:01:09.133  INFO 9996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-15 14:01:09.165  INFO 9996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-15 14:01:09.166  INFO 9996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-15 14:01:09.177  INFO 9996 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
-2019-03-15 14:01:09.544  INFO 9996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-15 14:01:09.544  INFO 9996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2466 ms
-2019-03-15 14:01:10.386  INFO 9996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:01:11.048  INFO 9996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-15 14:01:11.053  INFO 9996 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 4.717 seconds (JVM running for 6.089)
-2019-03-15 14:01:50.635  INFO 9996 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-15 14:01:50.638  INFO 9996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-15 14:01:50.651  INFO 9996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-03-15 14:01:50.728  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : fullList 
-2019-03-15 14:01:50.853  INFO 9996 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-03-15 14:01:51.379  INFO 9996 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-03-15 14:01:51.825  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : page =1, size= 10, resultPage - 2, content size = 10
-2019-03-15 14:01:51.827  INFO 9996 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
-2019-03-15 14:01:51.827  INFO 9996 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
-2019-03-15 14:01:51.834  INFO 9996 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=2&size=10&filterquery=fullList>; rel="next"
-2019-03-15 14:01:51.834  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
-2019-03-15 14:03:26.469  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 2 , size : 10 and filter query : fullList 
-2019-03-15 14:03:26.653  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 5, content size = 10
-2019-03-15 14:03:26.653  INFO 9996 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
-2019-03-15 14:03:26.653  INFO 9996 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
-2019-03-15 14:03:26.654  INFO 9996 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=3&size=10&filterquery=fullList>; rel="next"
-2019-03-15 14:03:26.654  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 2 and size : 10
-2019-03-15 14:03:32.291  INFO 9996 --- [http-nio-8080-exec-4] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 3 , size : 10 and filter query : fullList 
-2019-03-15 14:03:32.489  INFO 9996 --- [http-nio-8080-exec-4] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 5, content size = 10
-2019-03-15 14:03:32.490  INFO 9996 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
-2019-03-15 14:03:32.490  INFO 9996 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
-2019-03-15 14:03:32.490  INFO 9996 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=4&size=10&filterquery=fullList>; rel="next"
-2019-03-15 14:03:32.491  INFO 9996 --- [http-nio-8080-exec-4] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 3 and size : 10
-2019-03-15 14:03:37.083  INFO 9996 --- [http-nio-8080-exec-5] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 4 , size : 10 and filter query : fullList 
-2019-03-15 14:03:37.239  INFO 9996 --- [http-nio-8080-exec-5] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 5, content size = 10
-2019-03-15 14:03:37.240  INFO 9996 --- [http-nio-8080-exec-5] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
-2019-03-15 14:03:37.240  INFO 9996 --- [http-nio-8080-exec-5] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
-2019-03-15 14:03:37.240  INFO 9996 --- [http-nio-8080-exec-5] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=5&size=10&filterquery=fullList>; rel="next"
-2019-03-15 14:03:37.241  INFO 9996 --- [http-nio-8080-exec-5] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 4 and size : 10
-2019-03-15 14:03:45.371  INFO 9996 --- [http-nio-8080-exec-6] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 5 , size : 10 and filter query : fullList 
-2019-03-15 14:03:45.538  INFO 9996 --- [http-nio-8080-exec-6] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 5, content size = 5
-2019-03-15 14:03:45.538  INFO 9996 --- [http-nio-8080-exec-6] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
-2019-03-15 14:03:45.538  INFO 9996 --- [http-nio-8080-exec-6] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
-2019-03-15 14:03:45.538  INFO 9996 --- [http-nio-8080-exec-6] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 5 and size : 10
-2019-03-15 14:04:25.493  INFO 9996 --- [http-nio-8080-exec-7] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : updateOnly 
-2019-03-15 14:04:25.664  INFO 9996 --- [http-nio-8080-exec-7] c.u.u.c.UgdnSyncSolusRestController      : page =1, size= 10, resultPage - 2, content size = 10
-2019-03-15 14:04:25.664  INFO 9996 --- [http-nio-8080-exec-7] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: updateOnly
-2019-03-15 14:04:25.664  INFO 9996 --- [http-nio-8080-exec-7] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: updateOnly
-2019-03-15 14:04:25.664  INFO 9996 --- [http-nio-8080-exec-7] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=2&size=10&filterquery=updateOnly>; rel="next"
-2019-03-15 14:04:25.665  INFO 9996 --- [http-nio-8080-exec-7] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
-2019-03-15 14:04:29.704  WARN 9996 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2019-03-15 14:04:33.538  INFO 9996 --- [http-nio-8080-exec-9] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 2 , size : 10 and filter query : updateOnly 
-2019-03-15 14:04:33.643  INFO 9996 --- [http-nio-8080-exec-9] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 2, content size = 4
-2019-03-15 14:04:33.643  INFO 9996 --- [http-nio-8080-exec-9] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: updateOnly
-2019-03-15 14:04:33.644  INFO 9996 --- [http-nio-8080-exec-9] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
-2019-03-15 14:04:33.644  INFO 9996 --- [http-nio-8080-exec-9] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 2 and size : 10
-2019-03-15 14:04:56.235  INFO 9996 --- [http-nio-8080-exec-10] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : newOnly 
-2019-03-15 14:04:56.451  INFO 9996 --- [http-nio-8080-exec-10] c.u.u.c.UgdnSyncSolusRestController      : page =1, size= 10, resultPage - 2, content size = 10
-2019-03-15 14:04:56.451  INFO 9996 --- [http-nio-8080-exec-10] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: newOnly
-2019-03-15 14:04:56.451  INFO 9996 --- [http-nio-8080-exec-10] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: newOnly
-2019-03-15 14:04:56.452  INFO 9996 --- [http-nio-8080-exec-10] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=2&size=10&filterquery=newOnly>; rel="next"
-2019-03-15 14:04:56.452  INFO 9996 --- [http-nio-8080-exec-10] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
-2019-03-15 14:05:22.265  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 2 , size : 10 and filter query : newOnly 
-2019-03-15 14:05:22.366  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 2, content size = 7
-2019-03-15 14:05:22.366  INFO 9996 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: newOnly
-2019-03-15 14:05:22.366  INFO 9996 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
-2019-03-15 14:05:22.366  INFO 9996 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 2 and size : 10
-2019-03-15 14:05:51.130  INFO 9996 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : deleteOnly 
-2019-03-15 14:05:51.335  INFO 9996 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : page =1, size= 10, resultPage - 2, content size = 10
-2019-03-15 14:05:51.336  INFO 9996 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: deleteOnly
-2019-03-15 14:05:51.336  INFO 9996 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: deleteOnly
-2019-03-15 14:05:51.336  INFO 9996 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=2&size=10&filterquery=deleteOnly>; rel="next"
-2019-03-15 14:05:51.337  INFO 9996 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
-2019-03-15 14:05:54.993  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 2 , size : 10 and filter query : deleteOnly 
-2019-03-15 14:05:55.095  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : resultPage - 2, content size = 4
-2019-03-15 14:05:55.096  INFO 9996 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: deleteOnly
-2019-03-15 14:05:55.096  INFO 9996 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
-2019-03-15 14:05:55.096  INFO 9996 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 2 and size : 10
-2019-03-15 14:06:19.753  INFO 9996 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-03-15 14:06:19.759  INFO 9996 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:06:19.761  INFO 9996 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-03-15 14:06:19.860  INFO 9996 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-03-15 14:08:14.919  INFO 8128 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 8128 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 14:08:14.935  INFO 8128 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
-2019-03-15 14:08:16.919  INFO 8128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-15 14:08:16.963  INFO 8128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-15 14:08:16.964  INFO 8128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-15 14:08:16.977  INFO 8128 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
-2019-03-15 14:08:17.318  INFO 8128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-15 14:08:17.319  INFO 8128 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2268 ms
-2019-03-15 14:08:18.148  INFO 8128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:08:18.768  INFO 8128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-15 14:08:18.773  INFO 8128 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 4.517 seconds (JVM running for 5.779)
-2019-03-15 14:08:50.375  INFO 8128 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-03-15 14:08:50.381  INFO 8128 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:08:56.842  INFO 4404 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 4404 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 14:08:56.848  INFO 4404 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
-2019-03-15 14:08:58.749  INFO 4404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-15 14:08:58.790  INFO 4404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-15 14:08:58.791  INFO 4404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-15 14:08:58.801  INFO 4404 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
-2019-03-15 14:08:59.145  INFO 4404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-15 14:08:59.146  INFO 4404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2212 ms
-2019-03-15 14:08:59.998  INFO 4404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:09:00.575  INFO 4404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-15 14:09:00.580  INFO 4404 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 4.412 seconds (JVM running for 5.738)
-2019-03-15 14:09:48.666  INFO 4404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-15 14:09:48.667  INFO 4404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-15 14:09:48.678  INFO 4404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2019-03-15 14:09:48.748  INFO 4404 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 1000 and filter query : null 
-2019-03-15 14:11:28.986  INFO 4404 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-03-15 14:11:28.993  INFO 4404 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:11:38.673  INFO 8540 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 8540 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 14:11:38.680  INFO 8540 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
-2019-03-15 14:11:40.522  INFO 8540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-15 14:11:40.556  INFO 8540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-15 14:11:40.556  INFO 8540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-15 14:11:40.565  INFO 8540 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
-2019-03-15 14:11:40.898  INFO 8540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-15 14:11:40.899  INFO 8540 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2122 ms
-2019-03-15 14:11:41.643  INFO 8540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:11:42.182  INFO 8540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-15 14:11:42.187  INFO 8540 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 4.156 seconds (JVM running for 5.452)
-2019-03-15 14:11:49.171  INFO 8540 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-15 14:11:49.171  INFO 8540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-15 14:11:49.185  INFO 8540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-03-15 14:11:49.267  INFO 8540 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 1000 and filter query : null 
-2019-03-15 14:12:25.649  INFO 8540 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-03-15 14:12:25.654  INFO 8540 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:12:58.425  INFO 13884 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Starting UgdnsyncsolusApplicationTests on UBAN_30006337 with PID 13884 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
-2019-03-15 14:12:58.432  INFO 13884 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : No active profile set, falling back to default profiles: default
-2019-03-15 14:13:05.262  INFO 13884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-15 14:13:06.640  INFO 13884 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Started UgdnsyncsolusApplicationTests in 9.188 seconds (JVM running for 12.071)
-2019-03-15 14:13:07.707  INFO 13884 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-08 11:11:05.114  INFO 9668 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 9668 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
+2019-04-08 11:11:05.284  INFO 9668 --- [main] c.u.u.UgdnsyncsolusApplication           : No active profile set, falling back to default profiles: default
+2019-04-08 11:11:09.199  INFO 9668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-08 11:11:09.270  INFO 9668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-08 11:11:09.271  INFO 9668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-08 11:11:09.327  INFO 9668 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
+2019-04-08 11:11:09.908  INFO 9668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-08 11:11:09.909  INFO 9668 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4265 ms
+2019-04-08 11:11:12.284  INFO 9668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-08 11:11:13.224  INFO 9668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-08 11:11:13.230  INFO 9668 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 11.03 seconds (JVM running for 13.661)
+2019-04-08 11:23:23.645  INFO 9668 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-08 11:23:23.645  INFO 9668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-08 11:23:23.677  INFO 9668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2019-04-08 11:23:23.887  INFO 9668 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 1000 and filter query : fullList 
+2019-04-08 11:23:24.284  INFO 9668 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-08 11:23:25.763  INFO 9668 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-08 11:23:27.155  INFO 9668 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:23:27.155  INFO 9668 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
+2019-04-08 11:23:27.155  INFO 9668 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 1000
+2019-04-08 11:26:33.764  INFO 9668 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-08 11:26:33.771  INFO 9668 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-08 11:26:33.772  INFO 9668 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-08 11:26:33.850  INFO 9668 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-08 11:27:47.103  INFO 7880 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 7880 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
+2019-04-08 11:27:47.106  INFO 7880 --- [main] c.u.u.UgdnsyncsolusApplication           : The following profiles are active: uat
+2019-04-08 11:27:48.873  INFO 7880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-08 11:27:48.905  INFO 7880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-08 11:27:48.906  INFO 7880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-08 11:27:48.915  INFO 7880 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
+2019-04-08 11:27:49.300  INFO 7880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-08 11:27:49.300  INFO 7880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2098 ms
+2019-04-08 11:27:50.064  INFO 7880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-08 11:27:50.589  INFO 7880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-08 11:27:50.594  INFO 7880 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 4.014 seconds (JVM running for 5.193)
+2019-04-08 11:27:54.683  INFO 7880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-08 11:27:54.684  INFO 7880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-08 11:27:54.693  INFO 7880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-04-08 11:27:54.773  INFO 7880 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : fullList 
+2019-04-08 11:27:54.884  INFO 7880 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-08 11:27:55.415  INFO 7880 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-08 11:27:55.870  INFO 7880 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:27:55.870  INFO 7880 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
+2019-04-08 11:27:55.896  INFO 7880 --- [http-nio-8080-exec-1] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=2&size=10&filterquery=fullList>; rel="next"
+2019-04-08 11:27:55.897  INFO 7880 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
+2019-04-08 11:28:50.197  INFO 7880 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 2 , size : 10 and filter query : fullList 
+2019-04-08 11:28:50.396  INFO 7880 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:28:50.397  INFO 7880 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
+2019-04-08 11:28:50.397  INFO 7880 --- [http-nio-8080-exec-2] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=3&size=10&filterquery=fullList>; rel="next"
+2019-04-08 11:28:50.398  INFO 7880 --- [http-nio-8080-exec-2] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 2 and size : 10
+2019-04-08 11:29:06.553  INFO 7880 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 3 , size : 10 and filter query : fullList 
+2019-04-08 11:29:06.747  INFO 7880 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:29:06.747  INFO 7880 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
+2019-04-08 11:29:06.748  INFO 7880 --- [http-nio-8080-exec-3] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=4&size=10&filterquery=fullList>; rel="next"
+2019-04-08 11:29:06.748  INFO 7880 --- [http-nio-8080-exec-3] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 3 and size : 10
+2019-04-08 11:29:13.881  INFO 7880 --- [http-nio-8080-exec-4] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 4 , size : 10 and filter query : fullList 
+2019-04-08 11:29:14.063  INFO 7880 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:29:14.063  INFO 7880 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : filterquery in constructNextPageUri: fullList
+2019-04-08 11:29:14.063  INFO 7880 --- [http-nio-8080-exec-4] .u.u.e.PaginationDiscoverabilityListener : linkHeader : <http://localhost:8080/api/ugdnsync/pages?page=5&size=10&filterquery=fullList>; rel="next"
+2019-04-08 11:29:14.063  INFO 7880 --- [http-nio-8080-exec-4] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 4 and size : 10
+2019-04-08 11:29:22.296  INFO 7880 --- [http-nio-8080-exec-5] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 5 , size : 10 and filter query : fullList 
+2019-04-08 11:29:22.527  INFO 7880 --- [http-nio-8080-exec-5] .u.u.e.PaginationDiscoverabilityListener : filterquery in discovery: fullList
+2019-04-08 11:29:22.527  INFO 7880 --- [http-nio-8080-exec-5] .u.u.e.PaginationDiscoverabilityListener : linkHeader : 
+2019-04-08 11:29:22.528  INFO 7880 --- [http-nio-8080-exec-5] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 5 and size : 10
+2019-04-08 12:34:04.684  INFO 7880 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-08 12:34:04.692  INFO 7880 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-08 12:34:04.694  INFO 7880 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-08 12:34:04.773  INFO 7880 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-08 12:35:04.610  INFO 5012 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Starting UgdnsyncsolusApplicationTests on UBAN_30006337 with PID 5012 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
+2019-04-08 12:35:04.681  INFO 5012 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : The following profiles are active: uat
+2019-04-08 12:35:11.684  INFO 5012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-08 12:35:13.697  INFO 5012 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Started UgdnsyncsolusApplicationTests in 10.542 seconds (JVM running for 14.611)
+2019-04-08 12:37:37.406  INFO 12672 --- [main] c.u.u.UgdnsyncsolusApplication           : Starting UgdnsyncsolusApplication on UBAN_30006337 with PID 12672 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
+2019-04-08 12:37:37.451  INFO 12672 --- [main] c.u.u.UgdnsyncsolusApplication           : The following profiles are active: uat
+2019-04-08 12:37:41.471  INFO 12672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-08 12:37:41.567  INFO 12672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-08 12:37:41.568  INFO 12672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-08 12:37:41.602  INFO 12672 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Common Files\Lenovo;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.8.0_131\bin;C:\oracle_odac;C:\oracle_odac\bin;D:\softwares\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;C:\Windows\System32\cmd.exe;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64;D:\softwares\node-v10.15.0-win-x64\node-v10.15.0-win-x64\node_modules\npm;C:\Users\30006337\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\30006337\AppData\Local\GitHubDesktop\bin;.]
+2019-04-08 12:37:42.108  INFO 12672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-08 12:37:42.108  INFO 12672 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4485 ms
+2019-04-08 12:37:43.679  INFO 12672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-08 12:37:44.353  INFO 12672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-08 12:37:44.360  INFO 12672 --- [main] c.u.u.UgdnsyncsolusApplication           : Started UgdnsyncsolusApplication in 7.687 seconds (JVM running for 9.27)
+2019-04-08 12:37:57.559  INFO 12672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-08 12:37:57.560  INFO 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-08 12:37:57.582  INFO 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2019-04-08 12:37:59.323  INFO 12672 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Started getting data for page : 1 , size : 10 and filter query : fullList 
+2019-04-08 12:37:59.783  INFO 12672 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-08 12:38:01.918  INFO 12672 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-08 12:38:02.494  INFO 12672 --- [http-nio-8080-exec-1] c.u.u.c.UgdnSyncSolusRestController      : Completed getting data for page : 1 and size : 10
+2019-04-08 12:38:29.707  INFO 12672 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-08 12:38:29.710  INFO 12672 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-08 12:38:29.711  INFO 12672 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-08 12:38:29.787  INFO 12672 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-08 12:39:04.596  INFO 10480 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Starting UgdnsyncsolusApplicationTests on UBAN_30006337 with PID 10480 (started by 30006337 in D:\GIT PROJECTS\ugdn-sync-solus\ugdnsyncsolus)
+2019-04-08 12:39:04.598  INFO 10480 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : The following profiles are active: uat
+2019-04-08 12:39:10.699  INFO 10480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-08 12:39:12.132  INFO 10480 --- [main] c.u.u.UgdnsyncsolusApplicationTests      : Started UgdnsyncsolusApplicationTests in 8.584 seconds (JVM running for 11.263)
+2019-04-08 12:39:13.398  INFO 10480 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

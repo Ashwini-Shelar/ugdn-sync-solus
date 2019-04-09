@@ -27,7 +27,7 @@ public class PaginationDiscoverabilityListener implements ApplicationListener<Pa
 		// final String resourceName = clazz.getSimpleName().toString().toLowerCase();
 		uriBuilder.path("/api/ugdnsync/pages");
 		
-		logger.info("filterquery in discovery: {}", filterQuery);
+		logger.debug("filterquery in discovery: {}", filterQuery);
 		
 		final StringBuilder linkHeader = new StringBuilder();
 		if (hasNextPage(page, totalPages)) {
@@ -35,13 +35,13 @@ public class PaginationDiscoverabilityListener implements ApplicationListener<Pa
 			logger.trace("uriForNextPage : {}", uriForNextPage);
 			linkHeader.append(createLinkHeader(uriForNextPage, "next"));
 		}
-		logger.info("linkHeader : {}", linkHeader.toString());
+		logger.debug("linkHeader : {}", linkHeader.toString());
 		response.addHeader("Link", linkHeader.toString());
 	}
 
 	String constructNextPageUri(final UriComponentsBuilder uriBuilder, final int page, final int size,
 			String filterQuery) {
-		logger.info("filterquery in constructNextPageUri: {}", filterQuery);
+		logger.debug("filterquery in constructNextPageUri: {}", filterQuery);
 		
 		return uriBuilder.replaceQueryParam("page", page + 1).replaceQueryParam("size", size)
 				.replaceQueryParam("filterquery", filterQuery).build().encode().toUriString();

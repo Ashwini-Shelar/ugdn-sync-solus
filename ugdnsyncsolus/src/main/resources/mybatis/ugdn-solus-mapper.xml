@@ -71,7 +71,7 @@
 		ON(EAD.UID_NO=E.UID_NO AND
 		EAD.PARAM_NAME='hr_band')
 		LEFT JOIN UGDN_SYNC_OTHER_APPS SYNCAPP ON (E.UID_NO=SYNCAPP.UID_NO) 
-			where SYNCAPP.APP_CODE='SOLUS' 
+			where SYNCAPP.APP_CODE='SOLUS' and E.EMP_CATG IN ('E','D')
 	</sql>
 
 	<select id="getAllEmployeesPaginated" resultType="com.upl.ugdnsyncsolus.model.EmployeeDetailsModel">
